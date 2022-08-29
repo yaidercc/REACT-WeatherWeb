@@ -30,7 +30,6 @@ h1{
     color: var(--white-color);
 }
 
-
 .container-searcher::after{
     content: "";
     display: block;
