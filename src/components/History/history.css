@@ -1,0 +1,59 @@
+.container-historial{
+    position: absolute;
+    margin-top: 2rem;
+    z-index: 20;
+    color: #fff;
+    font-weight: 500;
+    align-self: flex-start;
+    flex-basis: calc(50% - 2rem);
+    width: 100%;
+    
+}
+.container-historial p {
+    text-align: start;
+    margin-bottom: 2rem;
+}
+.card-historial{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: 0.2rem solid #fff;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+.cards-historial{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-rows:repeat(auto-fill, minmax(50px, 1fr));
+    gap: 15px;
+    overflow-y: auto;
+    height: 200px;
+    padding-right:0.5rem ;
+}
+
+.cards-historial::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.cards-historial::-webkit-scrollbar:vertical {
+    width:10px;
+}
+
+.cards-historial::-webkit-scrollbar-button:increment,.cards-historial::-webkit-scrollbar-button {
+    display: none;
+} 
+
+.cards-historial::-webkit-scrollbar:horizontal {
+    height: 10px;
+}
+
+.cards-historial::-webkit-scrollbar-thumb {
+    background-color: #797979;
+    border-radius: 20px;
+    border: 2px solid #f1f2f3;
+}
+
+.cards-historial::-webkit-scrollbar-track {
+    border-radius: 10px;  
+}
