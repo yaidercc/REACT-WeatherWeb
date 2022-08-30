@@ -43,8 +43,22 @@ input{
     outline: none;
 }
 
-
 input::placeholder { 
     color: #fff;
 }
 
+@media (min-width:768px) {
+    body{
+        padding: 0 10px;
+    }
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        height: 100vh;
+        overflow: hidden;
+        /* background-color: red; */
+    }
+}

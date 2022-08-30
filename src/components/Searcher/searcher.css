@@ -14,11 +14,19 @@ h1{
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: space-around; */
     padding:50px;
+    width: 100%;
     background: url(../../assets/Background-search.jpg);
     background-position: center center;
     background-size: cover;
+}
+
+@media (min-width:768px) {
+    .container-searcher{
+        /* margin-top: 0; */
+        flex-basis: calc(70% - 2rem);
+        height: 90vh;
+    }
 }
 .content-searcher{
     position: absolute;

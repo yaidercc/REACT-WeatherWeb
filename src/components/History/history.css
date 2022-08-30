@@ -43,6 +43,11 @@
     padding-right:0.5rem;
 } 
 
+@media (min-width:768px) {
+    .cards-historial{
+        max-height: 50vh;
+    } 
+}
 
 .cards-historial::-webkit-scrollbar {
     -webkit-appearance: none;

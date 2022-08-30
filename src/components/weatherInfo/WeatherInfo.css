@@ -1,33 +1,55 @@
+
 .container-weatherInfo{
     border-radius: 25px;
     padding: 20px;
+    height: 70vh;
     margin-top: 20px;
     background-color: #fff;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, 
     rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
+
+@media (min-width:768px) {
+    .container-weatherInfo{
+        margin-top: 0;
+        height: 90vh;
+        flex-basis: calc(30% - 2rem);
+    }
+}
+
 .card-WeatherInfo{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
 }
+
 .cityname{
     align-self: flex-start;
     font-weight: 200;
-    font-size: calc(1.2em + 1.2vw);
+    font-size: 2.3rem;
 }
+
 .card-WeatherInfo img{
-    width: 20vw;
+    width: 30vw;
 }
+
+@media (min-width:768px) {
+    .card-WeatherInfo img{
+        width: 10vw;
+    }
+}
+
 .card-WeatherInfo h1{
     font-size: 60px;
     font-weight: 200;
     margin-bottom: 10px;
 }
+
 .minAndMax{
     font-weight: 600;
 }
+
 .minAndMax span{
     font-weight: 200;
 }

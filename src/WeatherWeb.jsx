@@ -42,7 +42,7 @@ const WeatherWeb = () => {
     };
 
     return (
-        <>
+        <div className="container">
             <div className="container-searcher">
                 <div className="content-searcher">
                     <Searcher addCity={addCity} />
@@ -52,7 +52,7 @@ const WeatherWeb = () => {
             <div className="container-weatherInfo">
                 <WeatherInfo/>
             </div>
-        </>
+        </div>
     );
 };
 
