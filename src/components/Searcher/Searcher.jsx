@@ -30,7 +30,7 @@ const Searcher=({addCity})=>{
             <form onSubmit={onAddCity}>
                 <input 
                     type="search" 
-                    placeholder="Ej: Medellin, New york"
+                    placeholder="Ingresa una ciudad."
                     onChange={onChange}
                     value={city}
                     />

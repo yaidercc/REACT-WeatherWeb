@@ -39,9 +39,10 @@
     grid-template-rows:repeat(auto-fill, minmax(50px, 1fr));
     gap: 15px;
     overflow-y: auto;
-    height: 200px;
-    padding-right:0.5rem ;
+    max-height: 20vh;
+    padding-right:0.5rem;
 } 
+
 
 .cards-historial::-webkit-scrollbar {
     -webkit-appearance: none;

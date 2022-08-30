@@ -1,6 +1,7 @@
 import { useState } from "react";
 import History from "./components/History/History";
 import Searcher from "./components/Searcher/Searcher";
+import WeatherInfo from "./components/weatherInfo/WeatherInfo";
 
 const WeatherWeb = () => {
     const [cities, setCities] = useState(["Bogota", "Medellin"]);
@@ -49,7 +50,7 @@ const WeatherWeb = () => {
                 </div>
             </div>
             <div className="container-weatherInfo">
-                
+                <WeatherInfo/>
             </div>
         </>
     );

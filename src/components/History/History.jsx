@@ -14,6 +14,8 @@ const History = ({ cities,searchAgain }) => {
                 })}
             </div>
         </div>
+        
+
     );
 };
 export default History;
