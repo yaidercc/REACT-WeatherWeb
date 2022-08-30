@@ -1,10 +1,19 @@
 import "./history.css";
-const History=({name})=>{
-    return(
-        <div className="card-historial">
-            <p>{name}</p>
-            <a href="#">x</a>
+const History = ({ cities }) => {
+    return (
+        <div className="container-historial">
+            <p>Busquedas recientes</p>
+            <div className="cards-historial">
+                {cities.map((city, i) => {
+                    return (
+                        <div className="card-historial" key={city}>
+                            <p>{city}</p>
+                            <p>🔎</p>
+                        </div>
+                    );
+                })}
+            </div>
         </div>
     );
-}
+};
 export default History;
