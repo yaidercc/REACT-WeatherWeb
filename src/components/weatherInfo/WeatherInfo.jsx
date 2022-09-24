@@ -1,13 +1,34 @@
+import {useWeather} from "../../hooks/useWeather.js"
 import "./WeatherInfo.css";
-const WeatherInfo=()=>{
+const WeatherInfo=({city})=>{
+    const {weather,isLoading}=useWeather(city);
+    const {min,max,desc,temp}=weather;
+    console.log(isLoading);
     return(
-        <div className="card-WeatherInfo">
-            <p className="cityname">Medellin</p>
-            <img src="src/assets/niebla.png" alt="Imagen de niebla" />
-            <h1>25°</h1>
-            <p>Muy nuboso</p>
-            <p className="minAndMax">Min: <span>12°</span>  |  Max: <span>23°</span></p>
-        </div>
+        <>
+        { !isLoading ?
+            (
+                <div className="container-weatherInfo">
+                    <div className="card-WeatherInfo">
+                        <p className="cityname">{city}</p>
+                        <img src="src/assets/niebla.png" alt="Imagen de niebla" />
+                        <h1>{temp}°</h1>
+                        <p className="climate">{desc}</p>
+                        <p className="minAndMax">Min: <span>{min}°</span>  |  Max: <span>{max}°</span></p>
+                    </div>
+                </div>
+            )
+            :
+            (
+                <div className="container-weatherInfo not-found">
+                    <div className="card-WeatherInfo">
+                        <img src="src/assets/icon-weather.png" alt="Imagen de niebla" />
+                        <p >Ingresa una ciudad</p>
+                    </div>
+                </div>
+                )
+        }
+        </>
     );
 }
 

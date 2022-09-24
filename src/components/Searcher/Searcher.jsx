@@ -34,6 +34,7 @@ const Searcher=({addCity})=>{
                     onChange={onChange}
                     value={city}
                     />
+                {/* <ListCities addCity={addCity}/> */}
             </form>
         </>
     );
