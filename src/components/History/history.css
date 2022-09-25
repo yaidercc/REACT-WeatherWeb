@@ -40,6 +40,10 @@
     white-space: nowrap;
     text-overflow: ellipsis;
 }
+.nothing{
+    text-align: center;
+    font-weight: 200;
+}
 .cards-historial{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -56,28 +60,3 @@
     } 
 }
 
-.cards-historial::-webkit-scrollbar {
-    -webkit-appearance: none;
-}
-
-.cards-historial::-webkit-scrollbar:vertical {
-    width:10px;
-}
-
-.cards-historial::-webkit-scrollbar-button:increment,.cards-historial::-webkit-scrollbar-button {
-    display: none;
-} 
-
-.cards-historial::-webkit-scrollbar:horizontal {
-    height: 10px;
-}
-
-.cards-historial::-webkit-scrollbar-thumb {
-    background-color: #797979;
-    border-radius: 20px;
-    border: 2px solid #f1f2f3;
-}
-
-.cards-historial::-webkit-scrollbar-track {
-    border-radius: 10px;  
-}

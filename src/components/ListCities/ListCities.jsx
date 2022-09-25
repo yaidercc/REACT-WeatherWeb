@@ -7,7 +7,7 @@ export const ListCities=({setState,addCity,setCity,cities,addCoordenates})=>{
         setState(false)
     }
     return (
-        <ul className="listCities">
+        <ul className="listCities scroll">
             {cities?.map((city,i)=><li key={i} onClick={()=>cityCoordenate(city.center[1],city.center[0],city.place_name)}>{city.place_name}</li>)}
         </ul>
     );

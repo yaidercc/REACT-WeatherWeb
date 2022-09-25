@@ -13,7 +13,8 @@ const Searcher=({addCity,addCoordenates})=>{
      */
     const onChange=(event)=>{
         setCity(event.target.value);
-        setState(true);
+        event.target.value=="" ? setState(false) : setState(true);
+        
     }
 
 
@@ -28,7 +29,7 @@ const Searcher=({addCity,addCoordenates})=>{
                     value={city}
                     />
                 {state 
-                    && <ListCities
+                    && <ListCities 
                             setState={setState}
                             city={city}
                             setCity={setCity}
