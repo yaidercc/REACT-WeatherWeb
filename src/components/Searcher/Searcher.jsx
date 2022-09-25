@@ -2,19 +2,20 @@ import { useState } from 'react';
 import {useCity} from '../../hooks/useCity.js';
 import {ListCities} from '../ListCities/ListCities'
 import './searcher.css';
+
 const Searcher=({addCity,addCoordenates})=>{
     const [city, setCity] = useState("");
     const {cities} = useCity(city);
-    const [state,setState] = useState(false);
+    const [showList,setShowList] = useState(false);
 
     /**
      * Funcion para guardar lo que se este escribiendo en el input en el usestate city
-     * @param {*} event change del input
+     * @param {*} event evento change del input
      */
     const onChange=(event)=>{
         setCity(event.target.value);
-        event.target.value=="" ? setState(false) : setState(true);
-        
+        // Valida que el input de buscar no este vacio para poder mostrar las opciones
+        event.target.value=="" ? setShowList(false) : setShowList(true);
     }
 
 
@@ -28,9 +29,9 @@ const Searcher=({addCity,addCoordenates})=>{
                     onChange={onChange}
                     value={city}
                     />
-                {state 
+                {showList 
                     && <ListCities 
-                            setState={setState}
+                            setShowList={setShowList}
                             city={city}
                             setCity={setCity}
                             addCity={addCity} 

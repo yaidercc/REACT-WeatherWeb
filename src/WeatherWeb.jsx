@@ -9,16 +9,19 @@ const WeatherWeb = () => {
 
     /**
      * Funcion para guardar ciudad en el usestate cities, y buscar la info del clima de esa ciudad
-     * @param {*} name nombre de la ciudad
+     * @param {*} lat latitud de la ciudad
+     * @param {*} long longitud de la ciudad
+     * @param {*} city nombre de la ciudad
      * @returns 
      */
     const addCity = (lat,long,city) => {
+
         city = firstCapitalize(city);
         setCoordenates({lat,long,city});
-        console.log("some: ",cities,city);
         if (city && cities.some(item=>item.city===city)) return;
         setCities([{lat,long,city}, ...cities]);
     }
+
     /**
      * Funcion para poner la primera letra de una palabra en mayuscula
      * @param {*} word 
@@ -29,10 +32,15 @@ const WeatherWeb = () => {
         const newWord = word.split(" ").map((el) => {
             return el.charAt(0).toUpperCase() + el.slice(1);
         }).join(" ");
-
         return newWord;
     };
 
+    /**
+     * Funcion que recibe las coordenadas y nombre de una ciudad y la añade al hook coordenates
+     * @param {*} lat latitud 
+     * @param {*} long longitud
+     * @param {*} city nombre de la ciudad
+     */
     const addCoordenates=(lat,long,city)=>{
         setCoordenates({lat,long,city});
     }

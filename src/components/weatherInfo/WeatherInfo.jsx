@@ -1,8 +1,10 @@
 import {useWeather} from "../../hooks/useWeather.js"
 import "./WeatherInfo.css";
 const WeatherInfo=({coordenates})=>{
+
     const {weather,isLoading}=useWeather(coordenates);
     const {min,max,desc,temp,icon}=weather;
+    
     return(
         <>
         { !isLoading ?

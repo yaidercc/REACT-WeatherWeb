@@ -1,10 +1,16 @@
 import "./ListCities.css";
-export const ListCities=({setState,addCity,setCity,cities,addCoordenates})=>{
+export const ListCities=({setShowList,addCity,setCity,cities,addCoordenates})=>{
+    /**
+     * Funcion que sirve para añadir las coordenadas de la ciudad seleccionada entre la lista que devuelve la api
+     * @param {*} lat latitud 
+     * @param {*} long longitud
+     * @param {*} city nombre de  la ciudad
+     */
     const cityCoordenate=(lat,long,city)=>{
         addCoordenates(lat,long,city);
         addCity(lat,long,city);
         setCity("");
-        setState(false)
+        setShowList(false);
     }
     return (
         <ul className="listCities scroll">
