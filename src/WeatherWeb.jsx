@@ -4,19 +4,20 @@ import Searcher from "./components/Searcher/Searcher";
 import WeatherInfo from "./components/weatherInfo/WeatherInfo";
 
 const WeatherWeb = () => {
-    const [cities, setCities] = useState(["Bogota"]);
-    const [city, setCity] = useState("");
+    const [cities, setCities] = useState([]);
+    const [coordenates, setCoordenates] = useState({lat:null,long:null,city:null});
 
     /**
      * Funcion para guardar ciudad en el usestate cities, y buscar la info del clima de esa ciudad
      * @param {*} name nombre de la ciudad
      * @returns 
      */
-    const addCity = (name) => {
-        name = firstCapitalize(name);
-        setCity(name);
-        if (cities.includes(name)) return;
-        setCities([name, ...cities]);
+    const addCity = (lat,long,city) => {
+        city = firstCapitalize(city);
+        setCoordenates({lat,long,city});
+        console.log("some: ",cities,city);
+        if (city && cities.some(item=>item.city===city)) return;
+        setCities([{lat,long,city}, ...cities]);
     }
     /**
      * Funcion para poner la primera letra de una palabra en mayuscula
@@ -32,16 +33,20 @@ const WeatherWeb = () => {
         return newWord;
     };
 
+    const addCoordenates=(lat,long,city)=>{
+        setCoordenates({lat,long,city});
+    }
+
     return (
         <div className="container">
             <div className="container-searcher">
                 <div className="content-searcher">
-                    <Searcher addCity={addCity} />
+                    <Searcher addCoordenates={addCoordenates} addCity={addCity}/>
                     <History cities={cities} searchAgain={addCity} />
                 </div>
             </div>
             {/* <div className="container-weatherInfo"> */}
-                <WeatherInfo city={city}/>
+                <WeatherInfo coordenates={coordenates}/>
             {/* </div> */}
         </div>
     );

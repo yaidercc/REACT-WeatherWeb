@@ -1,20 +1,20 @@
 import { useEffect, useState } from 'react'
-import { getCityInfo } from '../helpers/getCityInfo';
-export const useWeather = (city)=> {
+import { getWeatherInfo } from '../helpers/getWeatherInfo';
+export const useWeather = ({lat,long})=> {
     const [weather, setWeather] = useState({});
     const [isLoading, setIsLoading] = useState(true);
 
     const getWeather = async ()=>{
-        const data = await getCityInfo(city);
+        const data = await getWeatherInfo(lat,long);
         setWeather(data);
         setIsLoading(false);
     }
 
     useEffect(() => {
-        if(city){
+        if(lat && long){
             getWeather();
         }
-    }, [city])
+    }, [lat,long])
 
     return {
         weather,

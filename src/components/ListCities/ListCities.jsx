@@ -1,10 +1,14 @@
 import "./ListCities.css";
-export const ListCities=({addCity ,cities})=>{
-    console.log(cities);
+export const ListCities=({setState,addCity,setCity,cities,addCoordenates})=>{
+    const cityCoordenate=(lat,long,city)=>{
+        addCoordenates(lat,long,city);
+        addCity(lat,long,city);
+        setCity("");
+        setState(false)
+    }
     return (
-        <ul>
-            <li key={1}>Yaider</li>
-            <li key={2}>Sebastian</li>
+        <ul className="listCities">
+            {cities?.map((city,i)=><li key={i} onClick={()=>cityCoordenate(city.center[1],city.center[0],city.place_name)}>{city.place_name}</li>)}
         </ul>
     );
 }

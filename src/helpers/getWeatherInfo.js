@@ -1,4 +1,7 @@
 export const getWeatherInfo=async(lat,long)=>{
+
+    const urlImg="https://openweathermap.org/img/wn/";
+
     const dataApiWeather={
         token: "6f655c7955128ac692664687aa4821e2",
         units: 'metric',
@@ -17,6 +20,7 @@ export const getWeatherInfo=async(lat,long)=>{
         desc: weather[0].description,
         min:Math.trunc(main.temp_min),
         max: Math.trunc(main.temp_max),
-        temp: Math.trunc(main.temp)
+        temp: Math.trunc(main.temp),
+        icon:`${urlImg}/${weather[0].icon}@2x.png`
     }
 }

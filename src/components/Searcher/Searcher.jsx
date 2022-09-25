@@ -1,7 +1,11 @@
 import { useState } from 'react';
+import {useCity} from '../../hooks/useCity.js';
+import {ListCities} from '../ListCities/ListCities'
 import './searcher.css';
-const Searcher=({addCity})=>{
+const Searcher=({addCity,addCoordenates})=>{
     const [city, setCity] = useState("");
+    const {cities} = useCity(city);
+    const [state,setState] = useState(false);
 
     /**
      * Funcion para guardar lo que se este escribiendo en el input en el usestate city
@@ -9,33 +13,30 @@ const Searcher=({addCity})=>{
      */
     const onChange=(event)=>{
         setCity(event.target.value);
+        setState(true);
     }
 
-    /**
-     * Funcion para guardar la ciudad en el usestate de waetherWeb
-     * @param {*} event submit del formulario
-     * @returns 
-     */
-    const onAddCity=(event)=>{
-        event.preventDefault();
-        const cityName=city.trim();
-        if(city.length==0)return;
-        addCity(cityName);
-        setCity("");
-    }
 
     return(
         <>
             <h1>¿Como esta el clima?</h1>
-            <form onSubmit={onAddCity}>
+            <div>
                 <input 
                     type="search" 
                     placeholder="Ingresa una ciudad."
                     onChange={onChange}
                     value={city}
                     />
-                {/* <ListCities addCity={addCity}/> */}
-            </form>
+                {state 
+                    && <ListCities
+                            setState={setState}
+                            city={city}
+                            setCity={setCity}
+                            addCity={addCity} 
+                            cities={cities.features} 
+                            addCoordenates={addCoordenates}
+                            />}
+            </div>
         </>
     );
 }

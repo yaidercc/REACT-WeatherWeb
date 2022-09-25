@@ -4,10 +4,10 @@ const History = ({ cities,searchAgain }) => {
         <div className="container-historial">
             <p>Busquedas recientes</p>
             <div className="cards-historial">
-                {cities.map((city, i) => {
+                {cities.map((item, i) => {
                     return (
-                        <div className="card-historial" key={city} onClick={()=>searchAgain(city)}>
-                            <p>{city}</p>
+                        <div className="card-historial" key={i} onClick={()=>searchAgain(item.lat,item.long,item.city)}>
+                            <p className="nameCity">{item.city}</p>
                             <p>🔎</p>
                         </div>
                     );
