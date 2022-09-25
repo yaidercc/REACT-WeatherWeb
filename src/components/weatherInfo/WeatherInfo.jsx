@@ -2,7 +2,7 @@ import {useWeather} from "../../hooks/useWeather.js"
 import "./WeatherInfo.css";
 const WeatherInfo=({city})=>{
     const {weather,isLoading}=useWeather(city);
-    const {min,max,desc,temp}=weather;
+    const {min,max,desc,temp,icon}=weather;
     console.log(isLoading);
     return(
         <>
@@ -11,7 +11,7 @@ const WeatherInfo=({city})=>{
                 <div className="container-weatherInfo">
                     <div className="card-WeatherInfo">
                         <p className="cityname">{city}</p>
-                        <img src="src/assets/niebla.png" alt="Imagen de niebla" />
+                        <img src={icon} alt="Imagen de niebla" />
                         <h1>{temp}°</h1>
                         <p className="climate">{desc}</p>
                         <p className="minAndMax">Min: <span>{min}°</span>  |  Max: <span>{max}°</span></p>

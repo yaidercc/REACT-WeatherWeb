@@ -1,5 +1,7 @@
 export const getCityInfo = async(city) => {
 
+    const urlImg="https://openweathermap.org/img/wn/";
+
     const dataApiMapBox={
         token: "pk.eyJ1IjoieWFpZGVyY2MiLCJhIjoiY2w4ZWY0NGY4MDJxbDN1dDVzM2drcTczeSJ9.SG_7alV0yVYLTG98KDNnhQ",
         urlApi: function(){
@@ -35,6 +37,7 @@ export const getCityInfo = async(city) => {
         desc: weather[0].description,
         min:Math.trunc(main.temp_min),
         max: Math.trunc(main.temp_max),
-        temp: Math.trunc(main.temp)
+        temp: Math.trunc(main.temp),
+        icon:`${urlImg}/${weather[0].icon}@2x.png`
     }
 }
