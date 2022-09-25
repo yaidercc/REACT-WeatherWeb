@@ -1,7 +1,6 @@
 export const getCityInfo = async(city) => {
-
     const dataApiMapBox={
-        token: "pk.eyJ1IjoieWFpZGVyY2MiLCJhIjoiY2w4ZWY0NGY4MDJxbDN1dDVzM2drcTczeSJ9.SG_7alV0yVYLTG98KDNnhQ",
+        token: import.meta.env.VITE_MAP_BOX_KEY,
         urlApi: function(){
             return `https://api.mapbox.com/geocoding/v5/mapbox.places/${city}.json?access_token=${this.token}`
         }

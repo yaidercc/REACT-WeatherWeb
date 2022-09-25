@@ -3,7 +3,7 @@ export const getWeatherInfo=async(lat,long)=>{
     const urlImg="https://openweathermap.org/img/wn/";
 
     const dataApiWeather={
-        token: "6f655c7955128ac692664687aa4821e2",
+        token: import.meta.env.VITE_OPEN_WEATHER_TOKEN,
         units: 'metric',
         lang: 'es',
         urlApi: function(lat,long){
