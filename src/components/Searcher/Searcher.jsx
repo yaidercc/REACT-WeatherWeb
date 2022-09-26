@@ -25,7 +25,7 @@ const Searcher=({addCity,addCoordenates})=>{
             <div>
                 <input 
                     type="search" 
-                    placeholder="Ingresa una ciudad."
+                    placeholder="Ingresa una ciudad o pais"
                     onChange={onChange}
                     value={city}
                     />

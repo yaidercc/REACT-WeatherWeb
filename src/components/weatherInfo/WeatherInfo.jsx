@@ -23,8 +23,7 @@ const WeatherInfo=({coordenates})=>{
             (
                 <div className="container-weatherInfo not-found">
                     <div className="card-WeatherInfo">
-                        <img src="/assets/icon-weather.png" alt="Imagen de niebla" />
-                        <p >Ingresa una ciudad</p>
+                        <img src="/assets/icon-weather.png" alt="Imagen de clima" />
                     </div>
                 </div>
                 )
