@@ -23,6 +23,6 @@ Cuando se busca un lugar, en el apartado del historial queda registrada y al dar
 
     Javascript
     
-    React
+    React Js
 
 
