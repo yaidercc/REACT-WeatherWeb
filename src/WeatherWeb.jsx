@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Footer from "./components/Footer/Footer";
 import History from "./components/History/History";
 import Searcher from "./components/Searcher/Searcher";
 import WeatherInfo from "./components/weatherInfo/WeatherInfo";
@@ -46,18 +47,20 @@ const WeatherWeb = () => {
     }
 
     return (
-        <div className="container">
-            <div className="container-searcher">
-                <div className="content-searcher">
-                    <Searcher addCoordenates={addCoordenates} addCity={addCity}/>
-                    <History cities={cities} searchAgain={addCity} />
+        <>
+            <div className="container">
+                <div className="container-searcher">
+                    <div className="content-searcher">
+                        <Searcher addCoordenates={addCoordenates} addCity={addCity}/>
+                        <History cities={cities} searchAgain={addCity} />
+                    </div>
                 </div>
-            </div>
-            {/* <div className="container-weatherInfo"> */}
                 <WeatherInfo coordenates={coordenates}/>
-            {/* </div> */}
-        </div>
-    );
+                
+            </div>
+            <Footer/>
+        </>
+        );
 };
 
 export default WeatherWeb;
