@@ -1,25 +1,27 @@
 # WeatherWeb
 
-Sitio web que indica el clima de un lugar indicado mostrando datos como una descipcion del clima, los grados actuales, y los grados maximos y minimos registrados en dicho lugar.
+Website that indicates the climate of an indicated place showing data such as a description of the climate, the current degrees, and the maximum and minimum degrees registered in said place.
 
-WEB URL: 
-DESIGN URL: 
+WEB URL: weatherwebycc.netlify.app
+DESIGN URL: https://dribbble.com/shots/19492181-Weather-web-design
 
-Entrando a la web nos encontraremos con un sitio como este, inicialmente pedira una ciudad o pais para mostrar el clima de esta.
+Entrando al sitio web nos encontraremos con un sitio como este, inicialmente pedira una ciudad o pais para mostrar el clima de esta.
+Entering the website we will find a site like this, initially it will ask for a city or country to show its climate.
 
 ![image-text](https://github.com/yaidercc/REACT-WeatherWeb/blob/master/src/assets/design/home.PNG)
 
-ingresando los primeros digitos del lugar que deseamos saber el clima se mostrara un listado de lugares que coinciden con los digitos ingresados.
+Entering the first digits of the place that we want to know the weather, a list of places that match the entered digits will be displayed.
 
 ![image-text](https://github.com/yaidercc/REACT-WeatherWeb/blob/master/src/assets/design/busqueda.PNG)
 
-Una vez seleccionado el lugar que coincide con nuestra busqueda se mostrara la informacion del clima en el apartado derecho.
+Once the place that matches our search has been selected, the weather information will be displayed in the right section.
 
 ![image-text](https://github.com/yaidercc/REACT-WeatherWeb/blob/master/src/assets/design/clima.PNG)
 
-Cuando se busca un lugar, en el apartado del historial queda registrada y al darle clic se mostrara de nuevo la informacion de dicha ciudad.
 
-## Tecnologias usadas
+When a place is searched, it is registered in the history section and clicking on it will show the information of said city again
+
+## Technologies used
 
     Javascript
     
