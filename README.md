@@ -3,6 +3,7 @@
 Website that indicates the climate of an indicated place showing data such as a description of the climate, the current degrees, and the maximum and minimum degrees registered in said place.
 
 WEB URL: weatherwebycc.netlify.app
+
 DESIGN URL: https://dribbble.com/shots/19492181-Weather-web-design
 
 Entering the website we will find a site like this, initially it will ask for a city or country to show its climate.
