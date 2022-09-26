@@ -5,7 +5,6 @@ Website that indicates the climate of an indicated place showing data such as a 
 WEB URL: weatherwebycc.netlify.app
 DESIGN URL: https://dribbble.com/shots/19492181-Weather-web-design
 
-Entrando al sitio web nos encontraremos con un sitio como este, inicialmente pedira una ciudad o pais para mostrar el clima de esta.
 Entering the website we will find a site like this, initially it will ask for a city or country to show its climate.
 
 ![image-text](https://github.com/yaidercc/REACT-WeatherWeb/blob/master/src/assets/design/home.PNG)
