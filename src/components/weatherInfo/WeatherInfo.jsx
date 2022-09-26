@@ -4,7 +4,7 @@ const WeatherInfo=({coordenates})=>{
 
     const {weather,isLoading}=useWeather(coordenates);
     const {min,max,desc,temp,icon}=weather;
-    
+
     return(
         <>
         { !isLoading ?
@@ -23,7 +23,7 @@ const WeatherInfo=({coordenates})=>{
             (
                 <div className="container-weatherInfo not-found">
                     <div className="card-WeatherInfo">
-                        <img src="src/assets/icon-weather.png" alt="Imagen de niebla" />
+                        <img src="/assets/icon-weather.png" alt="Imagen de niebla" />
                         <p >Ingresa una ciudad</p>
                     </div>
                 </div>
