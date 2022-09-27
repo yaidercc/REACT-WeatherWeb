@@ -21,7 +21,7 @@ Once the place that matches our search has been selected, the weather informatio
 
 When a place is searched, it is registered in the history section and clicking on it will show the information of said city again
 
-## Technologies used
+## Technologies used:
 
 <a href="#" target="_blank"> 
     <img src="https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-plain.svg" alt="javascript" width="40" height="40"/> 
