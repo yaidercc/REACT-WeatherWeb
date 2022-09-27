@@ -23,8 +23,11 @@ When a place is searched, it is registered in the history section and clicking o
 
 ## Technologies used
 
-    Javascript
-    
-    React Js
+<a href="#" target="_blank"> 
+    <img src="https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-plain.svg" alt="javascript" width="40" height="40"/> 
+</a>       
+<a href="#" target="_blank"> 
+  <img src="https://github.com/devicons/devicon/blob/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/>
+</a>                       
 
 
