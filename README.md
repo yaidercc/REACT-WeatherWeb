@@ -24,10 +24,18 @@ When a place is searched, it is registered in the history section and clicking o
 ## Technologies used:
 
 <a href="#" target="_blank"> 
+  <img src="https://github.com/devicons/devicon/blob/master/icons/html5/html5-plain.svg" alt="html5" width="40" height="40"/> 
+</a>   
+ <a href="#" target="_blank"> 
+  <img src="https://github.com/devicons/devicon/blob/master/icons/css3/css3-plain.svg" alt="css3" width="40" height="40"/> 
+</a> 
+<a href="#" target="_blank"> 
     <img src="https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-plain.svg" alt="javascript" width="40" height="40"/> 
 </a>       
 <a href="#" target="_blank"> 
   <img src="https://github.com/devicons/devicon/blob/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/>
 </a>                       
+<a href="#" target="_blank"> <img src="https://github.com/devicons/devicon/blob/master/icons/sass/sass-original.svg" alt="sass" width="40" height="40"/> </a>
+                      
 
 
